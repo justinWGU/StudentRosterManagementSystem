@@ -3,10 +3,6 @@
 using namespace std;
 
 // ------------------- Constructors ----------------------
-Student::Student()
-{
-    return;
-}
 
 Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysToComplete1, int daysToComplete2, int daysToComplete3, DegreeProgram degreeProgram)
 {
@@ -22,6 +18,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
 }
 
 // ------------------------- Setter Functions -------------------------------
+
 void Student::SetStudentID(string studentID)
 {
     this->studentID = studentID;

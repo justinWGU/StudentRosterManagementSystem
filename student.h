@@ -12,8 +12,8 @@ private:
     string firstName;
     string lastName;
     string emailAddress;
-    int age;
-    int daysToComplete[3];
+    int age{};
+    int daysToComplete[3]{};
     enum DegreeProgram degreeProgram;
 
 public:
