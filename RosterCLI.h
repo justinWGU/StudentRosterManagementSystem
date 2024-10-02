@@ -10,10 +10,12 @@ class RosterCLI {
 
     private:
         Roster roster;
+        void add_student();
 
     public:
         RosterCLI(Roster& roster);
         void start();
+        void print_students();
 };
 
 

@@ -26,6 +26,7 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
     count++;
 }
 
+// parses string array of students anc creates a student out of each one
 void Roster::parse(string studentData)
 {
     // "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY"
@@ -83,6 +84,7 @@ void Roster::parse(string studentData)
 
 }
 
+// loop through student arr. If stud found: delete. Else: print error statement.
 void Roster::remove(string studentID)
 {
     for (int i = 0; i < 5; i++)
@@ -101,6 +103,7 @@ void Roster::remove(string studentID)
     }
 }
 
+// loop through student arr, while printing each stud's details
 void Roster::printAll()
 {
 
@@ -114,10 +117,13 @@ void Roster::printAll()
 
 }
 
+// calc avg # of days left to complete courses
 void Roster::printAverageDaysInCourse(string studentID)
 {
     for (int i = 0; i < 5; i++) {
+        // if stud found by id:
         if (classRosterArray[i] != nullptr && classRosterArray[i]->GetStudentID() == studentID) {
+
             int num1 = classRosterArray[i]->GetDaysToComplete(1);
             int num2 = classRosterArray[i]->GetDaysToComplete(2);
             int num3 = classRosterArray[i]->GetDaysToComplete(3);
@@ -134,15 +140,16 @@ void Roster::printAverageDaysInCourse(string studentID)
 
 }
 
+
 void Roster::printInvalidEmails()
 {
-    string email;
+
     cout << "Invalid emails: " << endl;
     for (int i = 0; i < 5; i++)
     {
         if (classRosterArray[i] != nullptr)
         {
-            email = classRosterArray[i]->GetEmailAddress();
+            string email = classRosterArray[i]->GetEmailAddress();
             if (email.find('@') == string::npos || email.find('.') == string::npos || email.find(' ') != string::npos)
             {
                 cout << email << endl;
@@ -150,6 +157,8 @@ void Roster::printInvalidEmails()
         }
     }
 }
+
+
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
 {
     string degPrgm;
@@ -161,6 +170,7 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
         degPrgm = "SOFTWARE";
 
     cout << "All students in " << degPrgm << " degree program: " << endl;
+
     for (int i = 0; i < 5; i++)
     {
         if (classRosterArray[i]->GetDegreeProgram() == degreeProgram)
