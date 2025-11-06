@@ -1,13 +1,19 @@
-# StudentRosterManagementSystem
+# Student Roster Management System
 
-*** Student Roster Management System ***
+## Author
+Justin Ortiz
 
-This C++ project manages student data efficiently by allowing users to add, 
-remove, and display student records, validate email addresses, and calculate 
-average course completion times. It also filters students by degree programs. 
-The system demonstrates key skills in object-oriented programming, data structures, 
-and error handling. This project was developed as a school assignment to showcase 
-proficiency in C++ and software development best practices.
+## About
+A CLI app made for an academic project developed with C++ and CMAKE to manage a student roster. Serves to demonstrate
+proficiency in core programming skills such as OOP, pointers, algorithms & data structures, error handling,
+and UI.
+
+### Functions
+- View all current students
+- Add new students
+- Remove students
+- Search for specific student
+- Validate student info
 
 
 
