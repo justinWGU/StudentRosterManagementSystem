@@ -9,7 +9,7 @@
 class RosterCLI {
 
     private:
-        Roster roster;
+        Roster roster{};
         void add_student();
 
     public:
